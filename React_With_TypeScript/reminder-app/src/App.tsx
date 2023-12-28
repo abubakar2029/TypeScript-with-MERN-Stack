@@ -1,17 +1,18 @@
 import "./App.css";
 
-import React from "react";
+import React, { useState } from "react";
+
 import Reminder from "./entities/reminder";
 import ReminderList from "./components/ReminderList/ReminderList";
-import logo from "./logo.svg";
 
-const reminders: Reminder[] = [
-  {
-    id: 1,
-    title: "Reminder 1",
-  },
-];
 function App() {
+  // const [reminders, setReminders] = useState<Reminder[]>(); // showing ( reminders[] | undefined )
+  const [reminders, setReminders] = useState<Reminder[]>([
+    {
+      id: 1,
+      title: "Reminder 1",
+    },
+  ]);
   return (
     <div className="App">
       <ReminderList items={reminders} />

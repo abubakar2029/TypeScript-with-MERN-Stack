@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-import React from "react";
 import Reminder from "../../entities/reminder";
 
 interface ReminderListProps {
